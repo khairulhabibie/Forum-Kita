@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 const DetailPage = () => {
   return (
     <div>DetailPage</div>
-  )
-}
+  );
+};
 
-export default DetailPage
+export default DetailPage;
