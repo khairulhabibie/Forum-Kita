@@ -2,12 +2,13 @@ import React from 'react';
 import HomePage from './pages/HomePage';
 import DetailPage from './pages/DetailPage';
 
-const App = () => {
+function App() {
   return (
-    <><HomePage />
+    <>
+      <HomePage />
       <DetailPage />
     </>
   );
-};
+}
 
 export default App;

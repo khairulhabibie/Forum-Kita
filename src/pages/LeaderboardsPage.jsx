@@ -1,9 +1,9 @@
 import React from 'react';
 
-const LeaderboardsPage = () => {
+function LeaderboardsPage() {
   return (
     <div>LeaderboardsPage</div>
   );
-};
+}
 
 export default LeaderboardsPage;

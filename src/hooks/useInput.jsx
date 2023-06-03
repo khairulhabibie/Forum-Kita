@@ -1,6 +1,5 @@
-import {useState} from 'react';
+import { useState } from 'react';
 
-// eslint-disable-next-line require-jsdoc
 function useInput(defaultValue = '') {
   const [value, setValue] = useState(defaultValue);
   const onValueChangeHandler = (event) => {
