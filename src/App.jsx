@@ -5,14 +5,14 @@ import LoginPage from './pages/LoginPage';
 import LeaderboardsPage from './pages/LeaderboardsPage';
 import RegisterPage from './pages/RegisterPage';
 // import DetailPage from './pages/DetailPage';
-import Navbar from './container/Navbar';
-import Footer from './container/Footer';
+import Navbar from './component/Navbar';
+import Footer from './component/Footer';
 
 function App() {
   return (
     <section className=" bg-slate-100">
       <Navbar />
-      <div className="w-[800px] bg-white mx-auto mt-14 p-7">
+      <div className="w-[800px] bg-white mx-auto my-14 p-7">
         <Routes>
           <Route path="/" exact element={<ThreadsPage />} />
           <Route path="/Leaderboards" login element={<LeaderboardsPage />} />
