@@ -2,7 +2,7 @@ import React from 'react';
 
 function LeaderboardsPage() {
   return (
-    <div>LeaderboardsPage</div>
+    <div className="min-h-screen">LeaderboardsPage</div>
   );
 }
 
