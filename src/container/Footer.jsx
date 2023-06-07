@@ -2,7 +2,13 @@ import React from 'react';
 
 function Footer() {
   return (
-    <div>Footer</div>
+    <div className="footer">
+      <ul>
+        <li>Threads</li>
+        <li>Leaderboards</li>
+        <li>Login</li>
+      </ul>
+    </div>
   );
 }
 
