@@ -1,4 +1,4 @@
-import api from '../../utils';
+import api from '../../utils/api';
 
 const ActionType = {
   RECEIVE_USERS: 'RECEIVER_USER',

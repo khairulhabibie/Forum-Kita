@@ -1,10 +1,15 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import LoginInput from '../component/Loginnput';
+import { asyncSetAuthUser } from '../state/authUser/action';
 
 function LoginPage() {
+  const dispatch = useDispatch();
+
   const onLogin = ({ email, password }) => {
+    dispatch(asyncSetAuthUser({ email, password }));
     // eslint-disable-next-line no-console
-    console.log('email:', email, 'password:', password);
+    console.log({ email, password });
   };
   return (
     <LoginInput login={onLogin} />
