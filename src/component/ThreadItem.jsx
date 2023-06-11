@@ -4,7 +4,7 @@ import React from 'react';
 import { AiOutlineLike, AiOutlineDislike } from 'react-icons/ai';
 import { BsReplyAll } from 'react-icons/bs';
 
-function PostItem() {
+function ThreadItem() {
   return (
     <div className="my-3 border-b-2 border-solid">
       <div className="py-2">
@@ -34,4 +34,4 @@ function PostItem() {
   );
 }
 
-export default PostItem;
+export default ThreadItem;

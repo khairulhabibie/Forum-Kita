@@ -1,24 +1,23 @@
 const api = (() => {
   const BASE_URL = 'https://forum-api.dicoding.dev/v1';
 
-  // eslint-disable-next-line no-underscore-dangle
-  async function _fetchWithAuth(url, options = {}) {
-    return fetch(url, {
-      ...options,
-      headers: {
-        ...options.headers,
-        // eslint-disable-next-line no-use-before-define
-        Authorization: `Bearer ${getAccessToken()}`,
-      },
-    });
-  }
-
   function putAccessToken(token) {
     localStorage.setItem('accessToken', token);
   }
 
   function getAccessToken() {
     return localStorage.getItem('accessToken');
+  }
+
+  // eslint-disable-next-line no-underscore-dangle
+  async function _fetchWithAuth(url, options = {}) {
+    return fetch(url, {
+      ...options,
+      headers: {
+        ...options.headers,
+        Authorization: `Bearer ${getAccessToken()}`,
+      },
+    });
   }
 
   async function register({ name, email, password }) {
@@ -162,19 +161,6 @@ const api = (() => {
     return comment;
   }
 
-  async function getLeaderboards() {
-    const response = await fetch(`${BASE_URL}/leaderboards`);
-    const responseJson = response.json();
-    const { status, message } = responseJson;
-
-    if (status !== 'success') {
-      throw new Error(message);
-    }
-
-    const { data: { leaderboards } } = responseJson;
-    return leaderboards;
-  }
-
   async function upVoteThread(threadId) {
     const response = await _fetchWithAuth(`${BASE_URL}/threads/${threadId}/up-vote`, {
       method: 'POST',
@@ -287,6 +273,19 @@ const api = (() => {
 
     const { data: { vote } } = response;
     return vote;
+  }
+
+  async function getLeaderboards() {
+    const response = await fetch(`${BASE_URL}/leaderboards`);
+    const responseJson = response.json();
+    const { status, message } = responseJson;
+
+    if (status !== 'success') {
+      throw new Error(message);
+    }
+
+    const { data: { leaderboards } } = responseJson;
+    return leaderboards;
   }
 
   return {

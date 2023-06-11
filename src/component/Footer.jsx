@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { BsChatSquareText } from 'react-icons/bs';
 import { VscGraph } from 'react-icons/vsc';
 import { IoMdLogIn, IoMdLogOut } from 'react-icons/io';
+import LogOut from './LogOut';
 
 function Footer() {
   return (
@@ -32,6 +33,10 @@ function Footer() {
             <IoMdLogOut className="mx-auto" />
             <p>Register</p>
           </Link>
+        </li>
+        <li>
+          <IoMdLogOut className="mx-auto" />
+          <LogOut />
         </li>
       </ul>
     </div>
