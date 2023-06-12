@@ -1,14 +1,13 @@
+/* eslint-disable no-console */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import ThreadList from '../component/ThreadList';
+// import ThreadList from '../component/ThreadList';
 import Chategory from '../component/Chategory';
 import asyncPopulateUserThreadAndLeaderboards from '../state/shared/action';
 
 function ThreadsPage() {
   const {
-    threads = [],
-    users = [],
-    authUser,
+    threads = ['hello'],
   } = useSelector((states) => states);
   const dispatch = useDispatch();
 
@@ -16,18 +15,13 @@ function ThreadsPage() {
     dispatch(asyncPopulateUserThreadAndLeaderboards());
   }, [dispatch]);
 
-  const threadList = threads.map((thread) => ({
-    ...thread,
-    user: users.find((user) => user.id === thread.ownerId),
-    authUser: authUser.id,
-  }));
-
   return (
     <div className="min-h-screen">
       <Chategory />
       <div className="my-5">
+        {console.log(threads.title)}
         <h3 className="text-2xl font-bold">Disikusi Tersedia</h3>
-        <ThreadList thread={threadList} />
+        {/* <ThreadList thread={threadList} /> */}
       </div>
     </div>
   );
