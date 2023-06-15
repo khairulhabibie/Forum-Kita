@@ -1,19 +1,20 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
-import PostItem from './ThreadItem';
+import ThreadItem from './ThreadItem';
 
-function ThreadList({ thread }) {
-  // eslint-disable-next-line no-console
-  console.log(thread);
+function ThreadList({ threads }) {
   return (
-    <PostItem />
+    <div>
+      {threads.map((thread) => (<ThreadItem key={thread.id} {...thread} />))}
+    </div>
   );
 }
 
 ThreadList.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
-  thread: PropTypes.array.isRequired,
+  threads: PropTypes.array.isRequired,
 };
 
 export default ThreadList;

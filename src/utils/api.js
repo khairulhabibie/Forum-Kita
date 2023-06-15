@@ -39,7 +39,7 @@ const api = (() => {
     }
 
     const { data: { user } } = responseJson;
-    return { user };
+    return user;
   }
 
   async function login({ email, password }) {
@@ -62,7 +62,7 @@ const api = (() => {
     }
 
     const { data: { token } } = responseJson;
-    return { token };
+    return token;
   }
 
   async function getOwnProfile() {
@@ -75,7 +75,7 @@ const api = (() => {
     }
 
     const { data: { user } } = responseJson;
-    return { user };
+    return user;
   }
 
   async function getAllUsers() {
@@ -88,7 +88,7 @@ const api = (() => {
     }
 
     const { data: { users } } = responseJson;
-    return { users };
+    return users;
   }
 
   async function createThread({ title, body, category = '' }) {
@@ -110,7 +110,7 @@ const api = (() => {
     }
 
     const { data: { thread } } = responseJson;
-    return { thread };
+    return thread;
   }
 
   async function getAllThreads() {
@@ -123,7 +123,7 @@ const api = (() => {
     }
 
     const { data: { threads } } = responseJson;
-    return { threads };
+    return threads;
   }
 
   async function getThreadDetail(threadId) {
@@ -136,7 +136,7 @@ const api = (() => {
     }
 
     const { data: { detailThread } } = responseJson;
-    return { detailThread };
+    return detailThread;
   }
 
   async function createComment({ content, threadId }) {
@@ -158,7 +158,7 @@ const api = (() => {
     }
 
     const { data: { comment } } = responseJson;
-    return { comment };
+    return comment;
   }
 
   async function upVoteThread(threadId) {
@@ -177,7 +177,7 @@ const api = (() => {
     }
 
     const { data: { vote } } = responseJson;
-    return { vote };
+    return vote;
   }
 
   async function downVoteThread(threadId) {
@@ -196,7 +196,7 @@ const api = (() => {
     }
 
     const { data: { vote } } = responseJson;
-    return { vote };
+    return vote;
   }
 
   async function neutralVoteThread(threadId) {
@@ -215,7 +215,7 @@ const api = (() => {
     }
 
     const { data: { vote } } = responseJson;
-    return { vote };
+    return vote;
   }
 
   async function upVoteComment({ threadId, commentId }) {
@@ -234,7 +234,7 @@ const api = (() => {
     }
 
     const { data: { vote } } = response;
-    return { vote };
+    return vote;
   }
 
   async function downVoteComment({ threadId, commentId }) {
@@ -253,7 +253,7 @@ const api = (() => {
     }
 
     const { data: { vote } } = response;
-    return { vote };
+    return vote;
   }
 
   async function neutralVoteComment({ threadId, commentId }) {
@@ -272,7 +272,7 @@ const api = (() => {
     }
 
     const { data: { vote } } = response;
-    return { vote };
+    return vote;
   }
 
   async function getLeaderboards() {
@@ -285,7 +285,7 @@ const api = (() => {
     }
 
     const { data: { leaderboards } } = responseJson;
-    return { leaderboards };
+    return leaderboards;
   }
 
   return {
