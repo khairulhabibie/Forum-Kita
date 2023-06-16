@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { BsChatSquareText } from 'react-icons/bs';
 import { VscGraph } from 'react-icons/vsc';
 import { IoMdLogIn, IoMdLogOut } from 'react-icons/io';
+import { AiOutlineForm } from 'react-icons/ai';
 import LogOut from './LogOut';
 
 function Footer() {
@@ -23,15 +24,15 @@ function Footer() {
           </Link>
         </li>
         <li>
-          <Link to="/Login">
-            <IoMdLogIn className="mx-auto" />
-            <p>Login</p>
+          <Link to="/Register">
+            <AiOutlineForm className="mx-auto" />
+            <p>Register</p>
           </Link>
         </li>
         <li>
-          <Link to="/Register">
-            <IoMdLogOut className="mx-auto" />
-            <p>Register</p>
+          <Link to="/Login">
+            <IoMdLogIn className="mx-auto" />
+            <p>Login</p>
           </Link>
         </li>
         <li>

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -7,6 +8,7 @@ import ThreadItem from './ThreadItem';
 function ThreadList({ threads }) {
   return (
     <div>
+      {console.log(threads)}
       {threads.map((thread) => (<ThreadItem key={thread.id} {...thread} />))}
     </div>
   );
