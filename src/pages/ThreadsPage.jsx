@@ -19,12 +19,10 @@ function ThreadsPage() {
     authUser,
   }));
   return (
-    <div className="min-h-screen">
-      <div className="my-5">
-        <h3 className="text-2xl font-bold">Disikusi Tersedia</h3>
-        <ThreadList threads={threadList} />
-      </div>
-    </div>
+    <>
+      <h3 className="title">Disikusi Tersedia</h3>
+      <ThreadList threads={threadList} />
+    </>
   );
 }
 

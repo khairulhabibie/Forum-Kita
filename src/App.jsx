@@ -10,12 +10,12 @@ import Footer from './component/Footer';
 
 function App() {
   return (
-    <section className=" bg-slate-100">
+    <section>
       <Navbar />
       <div className="w-[800px] bg-white mx-auto my-14 p-7">
         <Routes>
           <Route path="/" exact element={<ThreadsPage />} />
-          <Route path="/Leaderboards" login element={<LeaderboardsPage />} />
+          <Route path="/leaderboards" login element={<LeaderboardsPage />} />
           <Route path="/login" login element={<LoginPage />} />
           <Route path="/register" login element={<RegisterPage />} />
         </Routes>

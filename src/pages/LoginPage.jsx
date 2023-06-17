@@ -8,8 +8,6 @@ function LoginPage() {
 
   const onLogin = ({ email, password }) => {
     dispatch(asyncSetAuthUser({ email, password }));
-    // eslint-disable-next-line no-console
-    console.log({ email, password });
   };
   return (
     <LoginInput login={onLogin} />

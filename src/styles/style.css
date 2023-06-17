@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.title {
+  @apply pb-5 text-3xl font-bold uppercase;
+}
+
+.form {
+  @apply flex flex-col gap-4 font-bold;
+}
+
+.input {
+  @apply px-5 py-2 border-2 border-gray-300 border-solid;
+}
+
+.footer {
+  @apply fixed bottom-0 left-0 right-0 px-8 py-2 text-white bg-black text-lg;
+}

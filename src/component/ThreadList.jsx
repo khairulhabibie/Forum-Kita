@@ -7,10 +7,10 @@ import ThreadItem from './ThreadItem';
 
 function ThreadList({ threads }) {
   return (
-    <div>
+    <>
       {console.log(threads)}
       {threads.map((thread) => (<ThreadItem key={thread.id} {...thread} />))}
-    </div>
+    </>
   );
 }
 

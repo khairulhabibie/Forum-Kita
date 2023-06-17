@@ -9,7 +9,7 @@ import LogOut from './LogOut';
 
 function Footer() {
   return (
-    <div className="fixed bottom-0 left-0 right-0 px-8 py-2 text-2xl text-white bg-black">
+    <div className="footer">
       <ul className="flex justify-center space-x-6">
         <li>
           <Link to="/">
@@ -18,19 +18,19 @@ function Footer() {
           </Link>
         </li>
         <li>
-          <Link to="/Leaderboards">
+          <Link to="/leaderboards">
             <VscGraph className="mx-auto" />
             <p>Leaderboards</p>
           </Link>
         </li>
         <li>
-          <Link to="/Register">
+          <Link to="/register">
             <AiOutlineForm className="mx-auto" />
             <p>Register</p>
           </Link>
         </li>
         <li>
-          <Link to="/Login">
+          <Link to="/login">
             <IoMdLogIn className="mx-auto" />
             <p>Login</p>
           </Link>
