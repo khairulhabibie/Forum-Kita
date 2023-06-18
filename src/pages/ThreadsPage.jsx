@@ -20,7 +20,7 @@ function ThreadsPage() {
   }));
   return (
     <>
-      <h3 className="title">Disikusi Tersedia</h3>
+      <h3 className="title">Diskusi Tersedia</h3>
       <ThreadList threads={threadList} />
     </>
   );

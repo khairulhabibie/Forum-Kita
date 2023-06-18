@@ -7,6 +7,7 @@ import RegisterPage from './pages/RegisterPage';
 // import DetailPage from './pages/DetailPage';
 import Navbar from './component/Navbar';
 import Footer from './component/Footer';
+import DetailPage from './pages/DetailPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/leaderboards" login element={<LeaderboardsPage />} />
           <Route path="/login" login element={<LoginPage />} />
           <Route path="/register" login element={<RegisterPage />} />
+          <Route path="/threads/:id" login element={<DetailPage />} />
         </Routes>
       </div>
       <Footer />

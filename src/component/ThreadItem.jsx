@@ -7,12 +7,12 @@ import ThreadCategory from './ThreadCategory';
 import ThreadContent from './ThreadContent';
 
 function ThreadItem({
-  title, body, createdAt, user, category,
+  title, body, createdAt, user, category, id,
 }) {
   return (
     <div className="mb-5 border-b-2 border-solid">
       <ThreadCategory category={category} />
-      <ThreadContent title={title} body={body} createdAt={createdAt} user={user} />
+      <ThreadContent title={title} body={body} createdAt={createdAt} user={user} id={id} />
     </div>
   );
 }
@@ -20,6 +20,7 @@ function ThreadItem({
 ThreadItem.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   // upVotesBy: PropTypes.array.isRequired,
   // downVotesBy: PropTypes.array.isRequired,
   createdAt: PropTypes.string.isRequired,

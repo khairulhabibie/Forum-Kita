@@ -7,8 +7,7 @@
         "plugin:react/recommended",
         "airbnb"
     ],
-    "overrides": [
-    ],
+    "overrides": [],
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"
@@ -17,5 +16,8 @@
         "react"
     ],
     "rules": {
+        "no-alert": "off",
+        "import/no-extraneous-dependencies": "off",
+        "react/no-danger": "off"
     }
 }

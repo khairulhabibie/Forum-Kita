@@ -28,7 +28,6 @@ function asyncSetAuthUser({ email, password }) {
       const authUser = await api.getOwnProfile();
       dispatch(setAuthUserActionCreator(authUser));
     } catch (error) {
-      // eslint-disable-next-line no-alert
       alert(error.message);
     }
   };
