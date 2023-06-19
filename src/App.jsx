@@ -19,7 +19,7 @@ function App() {
           <Route path="/leaderboards" login element={<LeaderboardsPage />} />
           <Route path="/login" login element={<LoginPage />} />
           <Route path="/register" login element={<RegisterPage />} />
-          <Route path="/threads/:id" login element={<DetailPage />} />
+          <Route path="/threads/:threadId" login element={<DetailPage />} />
         </Routes>
       </div>
       <Footer />

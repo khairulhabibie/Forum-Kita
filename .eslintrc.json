@@ -18,6 +18,7 @@
     "rules": {
         "no-alert": "off",
         "import/no-extraneous-dependencies": "off",
-        "react/no-danger": "off"
+        "react/no-danger": "off",
+        "no-console": "off"
     }
 }
