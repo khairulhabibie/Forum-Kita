@@ -1,2 +1,2 @@
 # Forum-Kita
-Aplikasi Forum diskusi yang dikembangkan dengan Pengaplikasian Redux
+Discussion forum application developed with Redux Application
